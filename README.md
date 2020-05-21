@@ -14,4 +14,7 @@ GhostLoader Steps :)
 5. Execute C:\Tools\FileHistory.exe
 
 Does your tool/product detect/observe the Image Load Event?
+
+The purpose of this example is to demonstrate a way to circumvent, tools that catch/prevent ImageLoad events.
+
 ```
